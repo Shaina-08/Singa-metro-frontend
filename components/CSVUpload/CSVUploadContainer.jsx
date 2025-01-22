@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import CSVUploadPresenter from './CSVUploadPresenter';
+import { API_BASE_URL } from '../../api/reportApi';
 
 const CSVUploadContainer = () => {
   const [file, setFile] = useState(null);
@@ -25,7 +26,7 @@ const CSVUploadContainer = () => {
 
     try {
       const response = await axios.post(
-        'https://22e2-2a09-bac5-3f09-a82-00-10c-2d.ngrok-free.app/api/csv',
+        `${API_BASE_URL}/csv`,
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
