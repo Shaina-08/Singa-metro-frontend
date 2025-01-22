@@ -1,0 +1,128 @@
+/* Reset and Normalize Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.app {
+  display: flex ;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Content Area */
+.content {
+  flex: 1;
+  /* margin-left: 240px;  */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1abc9c;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #16a085;
+  outline: none;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #16a085;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* Sidebar will stack on top */
+    padding: 10px;
+  }
+
+  .sidebar {
+    position: relative; /* Adjust sidebar for smaller screens */
+    width: 100%;
+    height: auto;
+  }
+}
